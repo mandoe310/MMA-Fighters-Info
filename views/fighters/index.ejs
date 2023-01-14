@@ -1,0 +1,27 @@
+<%- include('../partials/header') %>
+
+<h2>Fighter List</h2>
+<table>
+  <thead>
+    <tr>
+      <th>Name/th>
+      <th>Age</th>
+      <th>Record</th>
+      <th>Weight</th>
+    </tr>
+  </thead>
+  <tbody>
+    <% fighters.forEach((f) => { %>
+
+      <tr>
+        <td><%= f.name %></td>
+        <td><%= f.age %></td>
+        <td><%= f.record %></td>
+        <td><%= f.weight %></td>
+      </tr>
+      
+      <% }); %>
+  </tbody>
+</table>
+
+<%- include('../partials/header') %>

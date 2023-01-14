@@ -1,0 +1,17 @@
+<%- include('../partials/header') %>
+
+<h2>Enter a New Fighter</h2>
+
+<form action="/flights" method="POST">
+<label>Name:</label>
+<input type="text" name="name"><br>
+<label>Age:</label>
+<input type="number" name="age"><br>
+<label>Weight:</label>
+<input type="number" name="weight"><br>
+<label>Record:</label>
+<input type="number" name="record"><br>
+<button type="submit">Add Fighter</button>
+</form>
+
+<%- include('../partials/footer') %>
