@@ -3,8 +3,6 @@ const Fighter = require('../models/fighter')
 module.exports = {
     create,
     delete: deleteComment,
-    edit,
-    update
 }
 
 function create(req, res) {
@@ -32,16 +30,4 @@ function create(req, res) {
     } catch(err) {
         return next(err)
     }
-}
-
-function edit(req, res) {
-  res.render('comments/edit', {
-    title: 'Edit Comment',
-    comment: comment.getOne(req.params.id)
-  })
-}
-
-function update(req, res) {
-  Fighter.updateOne(req.body, req.params.id)
-  res.redirect(`/fighters/${req.params.id}`)
 }
