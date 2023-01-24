@@ -4,7 +4,7 @@
   <img src="/images/kick.jpg"></img>
   <a href="/">HOME</a>
   <a href="/fighters">ALL FIGHTERS</a>
-  <a href="/fighters/new">ADD NEW FIGHTER</a>
+  <a href="/fighters/new">ADD FIGHTER</a>
   <a href="/fighters/<%= fighter.id %>/edit">EDIT FIGHTER</a>
   <a href="/logout">LOG OUT</a>
 </nav>
@@ -25,15 +25,15 @@
   id="add-comment-form"
   method="POST"
   action="/fighters/<%= fighter._id %>/comments">
-  <label>Comment:</label>
+  <label id="com-box"></label>
   <textarea name="content"></textarea>
-  <input type="submit" value="Add Comment" />
+  <input type="submit" value="Add Comment"/>
 </form>
 
 <% if (fighter.comments.length) { %>
 <% fighter.comments.forEach(function(c) { %>
 <td class="comment-user">
-  <img alt="avatar" src="<%= c.userAvatar %>" referrerpolicy="no-referrer" /><%=
+  <img id="gpic" alt="avatar" src="<%= c.userAvatar %>" referrerpolicy="no-referrer" /><%=
   c.userName %>
 </td>
 <td><%= c.createdAt.toLocaleDateString() %></td>

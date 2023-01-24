@@ -2,10 +2,10 @@
   box-sizing: border-box;
   font-family: Helvetica;
   color: #424748;
-  background-image: url(https://static.vecteezy.com/system/resources/previews/007/190/735/original/mma-octagon-arena-stage-background-free-vector.jpg);
 }
 
 body {
+  background-image: url(https://static.vecteezy.com/system/resources/previews/007/190/735/original/mma-octagon-arena-stage-background-free-vector.jpg);
   margin: 0;
   height: 100vh;
   display: grid;
@@ -17,7 +17,7 @@ body {
 
 body > nav {
   grid-area: nav;
-  background-color: #B8C0C2;
+  background-color: black;
   display: flex;
   justify-content: flex-end;
   align-items: center;
@@ -88,11 +88,13 @@ table {
 table thead th {
   padding: 5px;
   border-bottom: 2px solid #424748;
+  color: white;
 }
 
 table td {
   padding: 10px;
   text-align: center;
+  color: white;
 }
 
 #list td:nth-child(2), #list td:nth-child(3){
@@ -101,7 +103,7 @@ table td {
 
 #list a {
   border-radius: 4px;
-  background-color: #B8C0C2;
+  background-color: white;
   padding: 4px;
   text-decoration: none;
   font-size: 14px;
@@ -115,10 +117,18 @@ table td {
   display: grid;
   grid-template-columns: auto auto;
   grid-gap: 1rem;
+  color: red;
+}
+
+#show-page div {
+  color: white;
+  font-size: 50px;
 }
 
 #show-page div:nth-child(even) {
   font-weight: bold;
+  text-align: right;
+  font-size: 40px;
 }
 
 #add-comment-form {
@@ -131,39 +141,8 @@ table td {
 #add-comment-form input[type="submit"] {
   width: 10rem;
   grid-column: 2 / 3;
-}
-
-hr {
-  color: #424748
-}
-
-#badge-container {
-  display: flex;
-  flex-wrap: wrap;
-  /* padding: 1rem; */
-  width: 80%;
-  border: 2px solid #B8C0C2;
-  border-radius: .5rem;
-  margin: .5rem 0 2rem;
-}
-
-.badge {
-  background-color: #B8C0C2;
-  padding: .5rem;
-  margin: .5rem;
-  border-radius: .3rem;
-  font-size: .8rem;
-  text-align: center;
-}
-
-ul {
-  margin: 0 0 1rem;
-  padding: 0;
-  list-style: none;
-}
-	
-li {
-  font-weight: bold;
+  background-color: black;
+  color: white;
 }
 
 .login {
@@ -177,13 +156,21 @@ li {
   height: 30px;
 }
 
+
 .comment-user {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+border-radius: 50%;
 }
 
-.comment-user img {
+h2 {
+  color: white;
+  font-size: 30px;
+}
+
+#gpic {
   border-radius: 50%;
-  height: 40px;
+}
+
+h5 {
+  color: white;
+  font-size: 30px;
 }

@@ -10,19 +10,14 @@
 <table id="list">
   <thead>
     <tr>
-      <th>Name</th>
-      <th>Age</th>
-      <th>Weight</th>
-      <th>Record</th>
+      <th>FIGHTER NAME</th>
+      <th>ABOUT FIGHTER</th>
     </tr>
   </thead>
   <tbody>
     <% fighters.forEach(function(f) { %>
       <tr>
         <td><%= f.name %></td>
-        <td><%= f.age %></td>
-        <td><%= f.weight %></td>
-        <td><%= f.record %></td>
         <td><a href="/fighters/<%= f._id %>">DETAILS</a></td>
       </tr>
       <% }); %>
