@@ -1,16 +1,25 @@
 <%- include('../partials/header') %>
 
+<nav>
+    <a href="/">Home</a>
+    <a href="/fighters">ALL FIGHTERS</a>
+  </nav>
+
 <h2>Enter a New Fighter</h2>
 
-<form action="/flights" method="POST">
-<label>Name:</label>
-<input type="text" name="name"><br>
-<label>Age:</label>
-<input type="number" name="age"><br>
-<label>Weight:</label>
-<input type="number" name="weight"><br>
-<label>Record:</label>
-<input type="number" name="record"><br>
+<form action="/fighters" method="POST">
+<label>Name:
+<input type="text" name="name">
+</label><br>
+<label>Age:
+<input type="number" name="age">
+</label><br>
+<label>Weight:
+<input type="number" name="weight">
+</label><br>
+<label>Record:
+<input type="tel" name="record">
+</label><br>
 <button type="submit">Add Fighter</button>
 </form>
 

@@ -1,27 +1,30 @@
 <%- include('../partials/header') %>
 
-<h2>Fighter List</h2>
-<table>
+<nav>
+  <a href="/">HOME</a>
+  <a href="/fighters/new">ADD FIGHTER</a>
+</nav>
+
+<table id="list">
   <thead>
     <tr>
-      <th>Name/th>
+      <th>Name</th>
       <th>Age</th>
-      <th>Record</th>
       <th>Weight</th>
+      <th>Record</th>
     </tr>
   </thead>
   <tbody>
-    <% fighters.forEach((f) => { %>
-
+    <% fighters.forEach(function(f) { %>
       <tr>
         <td><%= f.name %></td>
         <td><%= f.age %></td>
-        <td><%= f.record %></td>
         <td><%= f.weight %></td>
+        <td><%= f.record %></td>
+        <td><a href="/fighters/<%= f._id %>">DETAILS</a></td>
       </tr>
-      
       <% }); %>
   </tbody>
 </table>
 
-<%- include('../partials/header') %>
+<%- include('../partials/footer') %>

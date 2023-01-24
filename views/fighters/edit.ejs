@@ -1,0 +1,19 @@
+<%- include('../partials/header') %>
+
+<form action="/fighters/<%= fighter.id %>?_method=PUT" method="POST" autocomplete="off">
+        <label>Name:
+        <input type="text" name="name">
+        </label><br>
+        <label>Age:
+        <input type="number" name="age">
+        </label><br>
+        <label>Weight:
+        <input type="number" name="weight">
+        </label><br>
+        <label>Record:
+        <input type="number" name="record">
+        </label><br>
+        <button type="submit">Save Fighter</button>
+        </form>
+
+<%- include('../partials/footer') %>
