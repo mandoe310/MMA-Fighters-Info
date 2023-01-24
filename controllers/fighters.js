@@ -7,7 +7,8 @@ module.exports = {
     create,
     delete: deleteFighter,
     edit,
-    update
+    update,
+
 }
 
 function index(req, res) { 
@@ -37,7 +38,7 @@ function create(req, res) {
     });
 }
 
-function deleteFighter(req, res) {
+function deleteFighter(req, res,) {
     Fighter.deleteOne(req.params.id)
     res.redirect('/fighters')
   }
