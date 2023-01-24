@@ -3,7 +3,7 @@ const router = express.Router()
 const commentsCtrl = require('../controllers/comments')
 const ensureLoggedIn = require('../config/ensureLoggedIn')
 
-router.post('/fighters/:id/comments', ensureLoggedIn, commentsCtrl.create)
+router.put('/comments/:id', ensureLoggedIn, commentsCtrl.edit)
 router.delete('/comments/:id', ensureLoggedIn, commentsCtrl.delete)
 
 

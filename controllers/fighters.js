@@ -42,14 +42,22 @@ function deleteFighter(req, res) {
     res.redirect('/fighters')
   }
 
-  function edit(req, res) {
-    res.render('fighters/edit', {
-      title: 'Edit Fighter',
-      fighter: Fighter.getOne(req.params.id)
-    })
-  }
+  function edit(req, res, next) {
+    Fighter.findById(req.params.id, function (err, fighter) {
+        if (err) { return next(err); }
+        res.render('fighters/edit', { fighter })
+    });
+}
 
-  function update(req, res) {
-    Fighter.updateOne(req.body, req.params.id)
-    res.redirect(`/fighters/${req.params.id}`)
-  }
+  function update(req, res, next) {
+    const updatedFighter = {
+        age: req.body.age,
+        weight: req.body.weight,
+        record: req.body.record
+    }
+    Fighter.findByIdAndUpdate(req.params.id, updatedFighter, { new: true }, function (err, fighter) {
+        if (err) { return next(err); }
+        res.redirect(`/fighters/${fighter._id}`);
+    });
+
+}

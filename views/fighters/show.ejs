@@ -4,54 +4,42 @@
   <a href="/">HOME</a>
   <a href="/fighters">ALL FIGHTERS</a>
   <a href="/fighters/new">ADD NEW FIGHTER</a>
+  <a href="/fighters/<%= fighter.id %>/edit">EDIT FIGHTER</a>
 </nav>
 
 <section id="show-page">
-  <div>Name: </div>
+  <div>Name:</div>
   <div><%= fighter.name %></div>
-  <div>Age: </div>
+  <div>Age:</div>
   <div><%= fighter.age %></div>
-  <div>Weight: </div>
+  <div>Weight:</div>
   <div><%= fighter.weight %></div>
-  <div>Record: </div>
+  <div>Record:</div>
   <div><%= fighter.record %></div>
 </section>
-<br><br><h2>Comments</h2>
-    <form id="add-comment-form" method="POST" action="/fighters/<%= fighter._id %>/comments">
-      <label>Comment:</label>
-      <textarea name="content"></textarea>
-      <input type="submit" value="Add Comment">
-    </form>
+<br /><br />
+<h2>Comments</h2>
+<form
+  id="add-comment-form"
+  method="POST"
+  action="/fighters/<%= fighter._id %>/comments">
+  <label>Comment:</label>
+  <textarea name="content"></textarea>
+  <input type="submit" value="Add Comment" />
+</form>
 
-  <% if (fighter.comments.length) { %>
-    <table>
-      <thead>
-        <tr>
-          <th>User</th>
-          <th>Date</th>
-          <th>Comment</th>
-          <th></th>
-        </tr>
-      </thead>
-      <tbody>
-        <% fighter.comments.forEach(function(c) { %>
-          <tr>
-            <td class="comment-user"><img alt="avatar" src="<%= c.userAvatar %>" referrerpolicy="no-referrer" ><%= c.userName %></td>
-            <td><%= c.createdAt.toLocaleDateString() %></td>
-            <td><%= c.content %></td>
-          </tr>
-          <td>
-              <form action="/comments/<%= c._id %>?_method=DELETE" method="POST">
-                <button type="submit">X</button>
-              </form>
-          </td>
-        </tr>
-        <% }); %>
-      </tbody>
-    </table>
-    
-  <% } else { %>
-    <h5>No Comments Yet</h5>
-  <% } %>
-  
-<%- include('../partials/footer') %>
+<% if (fighter.comments.length) { %>
+<% fighter.comments.forEach(function(c) { %>
+<td class="comment-user">
+  <img alt="avatar" src="<%= c.userAvatar %>" referrerpolicy="no-referrer" /><%=
+  c.userName %>
+</td>
+<td><%= c.createdAt.toLocaleDateString() %></td>
+<td><%= c.content %></td>
+<form action="/comments/<%= c._id %>?_method=DELETE" method="POST">
+  <button type="submit">DELETE</button>
+</form>
+<% }); %> 
+<% } else { %>
+<h5>No Comments Yet</h5>
+<% } %> <%- include('../partials/footer') %>

@@ -1,4 +1,8 @@
 <%- include('../partials/header') %>
+<nav>
+<a href="/">HOME</a>
+<a href="/fighters/<%= fighter.id %>/edit">EDIT FIGHTER</a>
+</nav>
 
 <form action="/fighters/<%= fighter.id %>?_method=PUT" method="POST" autocomplete="off">
         <label>Name:
