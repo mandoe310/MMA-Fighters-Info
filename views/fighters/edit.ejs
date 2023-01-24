@@ -1,7 +1,9 @@
 <%- include('../partials/header') %>
 <nav>
+<img src="/images/kick.jpg"></img>
 <a href="/">HOME</a>
 <a href="/fighters/<%= fighter.id %>/edit">EDIT FIGHTER</a>
+<a href="/logout">LOG OUT</a>
 </nav>
 
 <form action="/fighters/<%= fighter.id %>?_method=PUT" method="POST" autocomplete="off">
