@@ -1,6 +1,6 @@
 # MMA-Fighters-Info
 
-This is a basic website made with html, css, node.js, express, mongoose, dotenv, along with passport & google Oauth.
+This is a basic website made with html, css, node.js, express, mongoDB, mongoose, dotenv, along with passport & google Oauth.
 
 In this website you are able to view an mma figthers stats, weight, age, and fight record. Along with users after prompted to login will being able to edit and update and fighters as well as post or delete comments for what they think about each fighter.
 
