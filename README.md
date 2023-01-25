@@ -2,7 +2,7 @@
 
 This is a basic website made with html, css, node.js, express, mongoose, dotenv, along with passport & google Oauth.
 
-In this website you are able to view an mma figthers stats, weight, age, and fight record. Along with users after prompted to login will being able to edit update and delete fighters as well as post comments anout what they think about each fighter.
+In this website you are able to view an mma figthers stats, weight, age, and fight record. Along with users after prompted to login will being able to edit and update and fighters as well as post or delete comments for what they think about each fighter.
 
 <img width="1680" alt="Screenshot 2023-01-25 at 9 20 46 AM" src="https://user-images.githubusercontent.com/116835195/214636611-67286f3c-7410-4da9-8d9e-90139d886a05.png">
 <img width="1680" alt="Screenshot 2023-01-25 at 9 20 57 AM" src="https://user-images.githubusercontent.com/116835195/214636631-3c84e109-ab20-4b85-8867-fb3c5f8ae901.png">
