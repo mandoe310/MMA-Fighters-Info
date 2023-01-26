@@ -7,8 +7,7 @@ module.exports = {
     create,
     delete: deleteFighter,
     edit,
-    update,
-
+    update
 }
 
 function index(req, res) { 
